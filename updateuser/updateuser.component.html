@@ -1,0 +1,25 @@
+<app-adminhome></app-adminhome>
+<div class="box">
+    <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+        <div class="bg-white flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800 text-center">Update user</h2>
+                <div class="mb-4">
+                    <label for="username" class="block text-gray-700 text-sm font-semibold mb-2">Username</label>
+                    <input type="text" id="username" name="username" formControlName="username" placeholder="Enter your username" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none" required>
+                </div>
+                <div class="mb-4">
+
+                    <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">email</label>
+                    <input type="password" id="email" name="email" formControlName="email" placeholder="Enter user email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none" required>
+                </div>
+                <button type="submit" class="w-full py-2 px-4 bg-cyan-600 text-white font-bold rounded-md hover:bg-cyan-700 focus:outline-none">
+                Login
+            </button>
+                <p class="mt-4 text-center text-gray-600">Don't have an account?
+                    <a routerLink="/register" class="text-cyan-600 hover:underline">Register</a>
+                </p>
+            </div>
+        </div>
+    </form>
+</div>
